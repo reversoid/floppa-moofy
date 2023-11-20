@@ -1,0 +1,68 @@
+html,
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(19, 19, 19);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fefefe;
+  font-weight: 700;
+  text-align: center;
+}
+.image {
+  --size: 30rem;
+
+  width: var(--size);
+  height: var(--size);
+
+  @media (max-width: 600px) {
+    --size: 20rem;
+  }
+
+  @media (max-width: 360px) {
+    --size: 17rem;
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #fefefe;
+}
+
+.link {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fefefe;
+  transition: all 0.15s linear;
+  &:hover {
+    color: rgb(255, 209, 49);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
